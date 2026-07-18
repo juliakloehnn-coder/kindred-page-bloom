@@ -111,12 +111,12 @@ function Hero() {
       {/* base cream layer guarantees the same background color everywhere */}
       <div aria-hidden="true" className="absolute inset-0 z-0 bg-cream" />
       <img
-        src={heroJusticeBg.url}
+        src={heroJusticeBg}
         alt=""
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute -right-16 bottom-0 z-0 h-[95%] w-auto max-w-[70%] object-contain object-bottom opacity-80 blur-[4px] contrast-105 saturate-105"
+        className="pointer-events-none absolute -right-16 bottom-0 z-0 h-[95%] w-auto max-w-[70%] object-contain object-bottom opacity-90 contrast-105 saturate-105"
       />
       <div
         aria-hidden="true"

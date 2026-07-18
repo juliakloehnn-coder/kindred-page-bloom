@@ -318,82 +318,83 @@ function Contato() {
 
   return (
     <section id="contato" className="bg-background py-20 lg:py-28">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <div className="mb-6 h-px w-16 bg-gold" />
-          <p className="mb-4 text-xs tracking-[0.4em] text-gold">CONTATO</p>
-          <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
-            Vamos conversar sobre o seu caso.
-          </h2>
-          <div className="mt-10 space-y-8 lg:mt-12">
-            <div className="flex items-start gap-4">
-              <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
-              <div>
-                <p className="text-xs tracking-[0.3em] text-gold">TELEFONE</p>
-                <a href="tel:+554799964-3469" className="mt-1 block text-lg text-navy hover:text-gold">
-                  +55 47 99964-3469
-                </a>
+      <SectionContainer>
+        <SectionTitle label="CONTATO" />
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
+              Vamos conversar sobre o seu caso.
+            </h2>
+            <div className="mt-10 space-y-8 lg:mt-12">
+              <div className="flex items-start gap-4">
+                <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-gold">TELEFONE</p>
+                  <a href="tel:+554799964-3469" className="mt-1 block text-lg text-navy hover:text-gold">
+                    +55 47 99964-3469
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Mail className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
-              <div>
-                <p className="text-xs tracking-[0.3em] text-gold">E-MAIL</p>
-                <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-lg text-navy hover:text-gold">
-                  contato@kloehnbelusso.adv.br
-                </a>
+              <div className="flex items-start gap-4">
+                <Mail className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-gold">E-MAIL</p>
+                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-lg text-navy hover:text-gold">
+                    contato@kloehnbelusso.adv.br
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Instagram className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
-              <div>
-                <p className="text-xs tracking-[0.3em] text-gold">INSTAGRAM</p>
-                <a
-                  href="https://instagram.com/kloehnbelussoadvocacia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 block text-lg text-navy hover:text-gold"
-                >
-                  @kloehnbelussoadvocacia
-                </a>
+              <div className="flex items-start gap-4">
+                <Instagram className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-gold">INSTAGRAM</p>
+                  <a
+                    href="https://instagram.com/kloehnbelussoadvocacia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-lg text-navy hover:text-gold"
+                  >
+                    @kloehnbelussoadvocacia
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <form onSubmit={onSubmit} className="border border-border bg-card p-8 sm:p-10">
-          {(["nome", "email", "telefone"] as const).map((f) => (
-            <label key={f} className="mb-8 block">
-              <span className="text-xs tracking-[0.3em] text-gold">
-                {f === "email" ? "E-MAIL" : f.toUpperCase()}
-              </span>
-              <input
+          <form onSubmit={onSubmit} className="border border-border bg-card p-8 sm:p-10">
+            {(["nome", "email", "telefone"] as const).map((f) => (
+              <label key={f} className="mb-8 block">
+                <span className="text-xs tracking-[0.3em] text-gold">
+                  {f === "email" ? "E-MAIL" : f.toUpperCase()}
+                </span>
+                <input
+                  required
+                  type={f === "email" ? "email" : "text"}
+                  value={form[f]}
+                  onChange={(e) => setForm({ ...form, [f]: e.target.value })}
+                  className="mt-2 block w-full border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
+                />
+              </label>
+            ))}
+            <label className="mb-8 block">
+              <span className="text-xs tracking-[0.3em] text-gold">MENSAGEM</span>
+              <textarea
                 required
-                type={f === "email" ? "email" : "text"}
-                value={form[f]}
-                onChange={(e) => setForm({ ...form, [f]: e.target.value })}
-                className="mt-2 block w-full border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
+                rows={4}
+                value={form.mensagem}
+                onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
+                className="mt-2 block w-full resize-none border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
               />
             </label>
-          ))}
-          <label className="mb-8 block">
-            <span className="text-xs tracking-[0.3em] text-gold">MENSAGEM</span>
-            <textarea
-              required
-              rows={4}
-              value={form.mensagem}
-              onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-              className="mt-2 block w-full resize-none border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
-            />
-          </label>
-          <button
-            type="submit"
-            className="w-full bg-gold py-4 text-xs tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
-          >
-            ENVIAR MENSAGEM
-          </button>
-        </form>
-      </div>
+            <button
+              type="submit"
+              className="w-full bg-gold py-4 text-xs tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            >
+              ENVIAR MENSAGEM
+            </button>
+          </form>
+        </div>
+      </SectionContainer>
     </section>
   );
 }

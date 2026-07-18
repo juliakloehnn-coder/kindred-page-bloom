@@ -79,10 +79,10 @@ function Logo({ light = false }: { light?: boolean }) {
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-navy text-navy-foreground">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5 lg:px-14">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-14 lg:py-5">
         <Logo light />
-        <div className="hidden items-center gap-10 lg:flex">
-          <nav className="flex items-center gap-10">
+        <div className="hidden items-center gap-8 lg:flex lg:gap-12">
+          <nav className="flex items-center gap-8 lg:gap-12">
             {nav.map((n) => (
               <a
                 key={n.href}
@@ -177,7 +177,7 @@ function Sobre() {
           />
         </div>
         <div className="pt-2 lg:pt-8">
-          <div className="mb-5 h-px w-14 bg-gold" />
+          <div className="mb-4 h-px w-14 bg-gold" />
           <p className="mb-3 text-xs tracking-[0.4em] text-gold">SOBRE NÓS</p>
           <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
             Compromisso que gera{" "}
@@ -203,13 +203,13 @@ function QuemSomos() {
     { img: ketlinImg.url, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187" },
   ];
   return (
-    <section id="quem" className="bg-cream py-24">
+    <section id="quem" className="bg-cream py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center lg:mb-16">
           <p className="mb-4 text-xs tracking-[0.4em] text-gold">QUEM SOMOS</p>
           <div className="mx-auto h-px w-16 bg-gold" />
         </div>
-        <div className="grid gap-14 md:grid-cols-2 md:gap-8">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-12">
           {socias.map((s) => (
             <div key={s.name} className="flex flex-col items-center gap-8 sm:flex-row sm:items-start">
               <img
@@ -239,9 +239,9 @@ function QuemSomos() {
 
 function Areas() {
   return (
-    <section id="areas" className="bg-background py-24">
+    <section id="areas" className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center">
+        <div className="mb-12 text-center lg:mb-16">
           <div className="mx-auto mb-6 h-px w-16 bg-gold" />
           <p className="mb-6 text-xs tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
           <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
@@ -267,14 +267,14 @@ function Areas() {
 
 function Valores() {
   return (
-    <section className="bg-cream py-24">
+    <section className="bg-cream py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-6 h-px w-16 bg-gold" />
         <p className="mb-4 text-xs tracking-[0.4em] text-gold">NOSSOS VALORES</p>
         <h2 className="max-w-3xl font-serif text-4xl leading-tight text-navy sm:text-5xl">
           Pilares que sustentam cada parecer e cada decisão.
         </h2>
-        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-12">
           {valores.map((v) => (
             <div key={v.t} className="border-t border-border pt-6">
               <div className="flex items-baseline gap-3">
@@ -303,15 +303,15 @@ function Contato() {
   };
 
   return (
-    <section id="contato" className="bg-background py-24">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-2">
+    <section id="contato" className="bg-background py-20 lg:py-28">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:gap-16">
         <div>
           <div className="mb-6 h-px w-16 bg-gold" />
           <p className="mb-4 text-xs tracking-[0.4em] text-gold">CONTATO</p>
           <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
             Vamos conversar sobre o seu caso.
           </h2>
-          <div className="mt-12 space-y-8">
+          <div className="mt-10 space-y-8 lg:mt-12">
             <div className="flex items-start gap-4">
               <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
               <div>

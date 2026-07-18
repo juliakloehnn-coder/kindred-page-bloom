@@ -182,11 +182,11 @@ function Hero() {
 
 function Sobre() {
   return (
-    <section id="sobre" className="bg-background py-20 lg:py-28">
+    <section id="sobre" className="bg-background py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="SOBRE NÓS" />
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[5fr_7fr] lg:gap-16">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden sm:max-w-[18rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[22rem]">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[5fr_7fr] lg:gap-12">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden sm:max-w-[17rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[19rem]">
             <img
               src={sobreImg.url}
               alt="Sócias do escritório Kloehn & Belusso Advocacia"
@@ -196,12 +196,12 @@ function Sobre() {
               className="absolute inset-0 h-full w-full object-cover object-[center_30%] sm:object-[center_20%] lg:object-[center_10%]"
             />
           </div>
-          <div className="pt-2 lg:pt-8">
-            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
+          <div className="pt-2 lg:pt-6">
+            <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
               Compromisso que gera{" "}
               <span className="italic text-gold">confiança</span>.
             </h2>
-            <div className="mt-6 space-y-4 text-lg font-normal leading-relaxed text-muted-foreground lg:mt-8">
+            <div className="mt-5 space-y-3 text-base font-normal leading-relaxed text-muted-foreground lg:mt-6">
               <p>
                 Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
               </p>

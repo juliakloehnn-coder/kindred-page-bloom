@@ -108,25 +108,27 @@ function Header() {
 function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-cream">
+      {/* base cream layer guarantees the same background color everywhere */}
+      <div aria-hidden="true" className="absolute inset-0 z-0 bg-cream" />
       <img
         src={heroJusticeBg.url}
         alt=""
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute -right-16 bottom-0 z-0 h-[95%] w-auto max-w-[70%] object-contain object-bottom opacity-90 blur-[3px] contrast-105 saturate-105 mix-blend-multiply"
+        className="pointer-events-none absolute -right-16 bottom-0 z-0 h-[95%] w-auto max-w-[70%] object-contain object-bottom opacity-80 blur-[4px] contrast-105 saturate-105"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/70 via-45% to-cream/10"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/80 via-50% to-cream/15"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 z-10 h-40 bg-gradient-to-t from-cream to-transparent"
+        className="absolute inset-x-0 bottom-0 z-10 h-48 bg-gradient-to-t from-cream via-cream/70 to-transparent"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 z-10 h-32 bg-gradient-to-b from-cream to-transparent"
+        className="absolute inset-x-0 top-0 z-10 h-40 bg-gradient-to-b from-cream via-cream/70 to-transparent"
       />
 
       <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-32">

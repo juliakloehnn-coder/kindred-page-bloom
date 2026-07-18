@@ -14,7 +14,7 @@ import {
 import duoImg from "@/assets/duo.jpg";
 import juliaImg from "@/assets/julia.jpg";
 import ketlinImg from "@/assets/ketlin.jpg";
-import heroJusticeBg from "@/assets/hero-justice-background.png.asset.json";
+import heroJusticeBg from "@/assets/hero-justice-transparent.png";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
 import monogramAsset from "@/assets/kb-monogram.png.asset.json";
 

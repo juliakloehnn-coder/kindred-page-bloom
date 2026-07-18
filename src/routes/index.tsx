@@ -316,20 +316,20 @@ function Contato() {
   };
 
   return (
-    <section id="contato" className="bg-background py-20 lg:py-28">
+    <section id="contato" className="bg-background py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="CONTATO" />
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
-            <h2 className="font-serif text-5xl leading-tight text-navy sm:text-6xl">
+            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
               Vamos conversar sobre o seu caso.
             </h2>
-            <div className="mt-10 space-y-8 lg:mt-12">
+            <div className="mt-8 space-y-6 lg:mt-10">
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
                 <div>
                   <p className="text-sm font-medium tracking-[0.3em] text-gold">TELEFONE</p>
-                  <a href="tel:+554799964-3469" className="mt-1 block text-xl font-medium text-navy hover:text-gold">
+                  <a href="tel:+554799964-3469" className="mt-1 block text-lg font-medium text-navy hover:text-gold">
                     +55 47 99964-3469
                   </a>
                 </div>
@@ -338,7 +338,7 @@ function Contato() {
                 <Mail className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
                 <div>
                   <p className="text-sm font-medium tracking-[0.3em] text-gold">E-MAIL</p>
-                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-xl font-medium text-navy hover:text-gold">
+                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-lg font-medium text-navy hover:text-gold">
                     contato@kloehnbelusso.adv.br
                   </a>
                 </div>
@@ -351,7 +351,7 @@ function Contato() {
                     href="https://instagram.com/kloehnbelussoadvocacia"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-xl font-medium text-navy hover:text-gold"
+                    className="mt-1 block text-lg font-medium text-navy hover:text-gold"
                   >
                     @kloehnbelussoadvocacia
                   </a>
@@ -360,9 +360,9 @@ function Contato() {
             </div>
           </div>
 
-          <form onSubmit={onSubmit} className="border border-border bg-card p-8 sm:p-10">
+          <form onSubmit={onSubmit} className="border border-border bg-card p-7 sm:p-9">
             {(["nome", "email", "telefone"] as const).map((f) => (
-              <label key={f} className="mb-8 block">
+              <label key={f} className="mb-6 block">
                 <span className="text-sm font-medium tracking-[0.3em] text-gold">
                   {f === "email" ? "E-MAIL" : f.toUpperCase()}
                 </span>
@@ -375,7 +375,7 @@ function Contato() {
                 />
               </label>
             ))}
-            <label className="mb-8 block">
+            <label className="mb-6 block">
               <span className="text-sm font-medium tracking-[0.3em] text-gold">MENSAGEM</span>
               <textarea
                 required
@@ -387,7 +387,7 @@ function Contato() {
             </label>
             <button
               type="submit"
-              className="w-full bg-gold py-4 text-sm font-medium tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+              className="w-full bg-gold py-3.5 text-sm font-medium tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
             >
               ENVIAR MENSAGEM
             </button>

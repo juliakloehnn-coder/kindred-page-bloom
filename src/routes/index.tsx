@@ -114,11 +114,11 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute right-0 top-0 z-0 h-full w-[65%] object-cover object-[center_30%]"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-contain object-center"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/70 to-cream/30"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-cream/90 via-cream/60 to-cream/30"
       />
       <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-32">
         <img

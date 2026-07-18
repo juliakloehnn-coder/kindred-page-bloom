@@ -57,7 +57,7 @@ function SectionContainer({ children, className = "" }: { children: React.ReactN
 function SectionTitle({ label, className = "" }: { label: string; className?: string }) {
   return (
     <div className={`mb-12 text-center lg:mb-16 ${className}`}>
-      <p className="mb-4 text-xs tracking-[0.4em] text-gold">{label}</p>
+      <p className="mb-4 text-sm font-medium tracking-[0.4em] text-gold">{label}</p>
       <div className="mx-auto h-px w-16 bg-gold" />
     </div>
   );
@@ -105,7 +105,7 @@ function Header() {
               <a
                 key={n.href}
                 href={n.href}
-                className="text-[15px] font-normal text-white transition hover:text-gold"
+                className="text-[16px] font-medium text-white transition hover:text-gold"
               >
                 {n.label}
               </a>
@@ -113,7 +113,7 @@ function Header() {
           </nav>
           <a
             href="#contato"
-            className="border px-6 py-3 text-[11px] font-light tracking-[0.28em] transition hover:bg-gold hover:text-navy"
+            className="border px-6 py-3 text-[12px] font-normal tracking-[0.28em] transition hover:bg-gold hover:text-navy"
             style={{ borderColor: "var(--color-gold)", color: "var(--color-gold)" }}
           >
             FALE CONOSCO
@@ -157,20 +157,20 @@ function Hero() {
           aria-hidden="true"
           className="mb-8 h-28 w-auto md:h-36"
         />
-        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+        <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
           KLOEHN & BELUSSO
         </h1>
-        <p className="mt-5 text-xs tracking-[0.5em] text-gold">ADVOCACIA</p>
+        <p className="mt-5 text-sm font-medium tracking-[0.5em] text-gold">ADVOCACIA</p>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="#areas"
-            className="bg-gold px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            className="bg-gold px-8 py-4 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
           >
             ÁREAS DE ATUAÇÃO
           </a>
           <a
             href="#contato"
-            className="border border-border bg-cream px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            className="border border-border bg-cream px-8 py-4 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
           >
             CONTATO
           </a>
@@ -197,11 +197,11 @@ function Sobre() {
             />
           </div>
           <div className="pt-2 lg:pt-8">
-            <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
               Compromisso que gera{" "}
               <span className="italic text-gold">confiança</span>.
             </h2>
-            <div className="mt-6 space-y-4 text-base font-light leading-relaxed text-muted-foreground lg:mt-8">
+            <div className="mt-6 space-y-4 text-lg font-normal leading-relaxed text-muted-foreground lg:mt-8">
               <p>
                 Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
               </p>
@@ -239,11 +239,11 @@ function QuemSomos() {
                 />
               </div>
               <div className="mt-8">
-                <h3 className="font-serif text-[1.75rem] leading-[1.15] text-navy sm:text-[2rem] lg:text-[2.25rem]">
+                <h3 className="font-serif text-[2rem] leading-[1.15] text-navy sm:text-[2.25rem] lg:text-[2.5rem]">
                   <span>{s.line1}<br /></span>
                   <span className="font-bold">{s.line2}</span>
                 </h3>
-                <p className="mt-5 text-sm tracking-widest text-gold">{s.oab}</p>
+                <p className="mt-5 text-base font-medium tracking-widest text-gold">{s.oab}</p>
                 <div className="mx-auto mt-4 h-px w-16 bg-gold" />
               </div>
             </div>
@@ -259,9 +259,9 @@ function Areas() {
     <section id="areas" className="bg-background py-20 lg:py-28">
       <SectionContainer>
         <div className="mb-12 text-center lg:mb-16">
-          <p className="mb-4 text-xs tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
+          <p className="mb-4 text-sm font-medium tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
           <div className="mx-auto mb-6 h-px w-16 bg-gold" />
-          <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
+          <h2 className="font-serif text-5xl leading-tight text-navy sm:text-6xl lg:text-7xl">
             Atuação multidisciplinar,<br />soluções sob medida.
           </h2>
         </div>
@@ -269,8 +269,8 @@ function Areas() {
           {areas.map((a) => (
             <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-10 transition hover:bg-muted">
               <a.icon className="h-8 w-8 stroke-[1.25] text-gold" />
-              <h3 className="mt-6 font-serif text-3xl text-navy">{a.title}</h3>
-              <p className="mt-3 flex-grow text-base font-light leading-relaxed text-muted-foreground">
+              <h3 className="mt-6 font-serif text-4xl text-navy">{a.title}</h3>
+              <p className="mt-3 flex-grow text-lg font-normal leading-relaxed text-muted-foreground">
                 {a.desc}
               </p>
               <div className="mt-6 h-px w-10 bg-gold" />
@@ -291,10 +291,10 @@ function Valores() {
           {valores.map((v) => (
             <div key={v.t} className="flex h-full flex-col border-t border-border pt-6">
               <div className="flex items-baseline gap-3">
-                <span className="text-xs tracking-widest text-gold">{v.n}</span>
-                <h3 className="font-serif text-3xl text-navy">{v.t}</h3>
+                <span className="text-sm font-medium tracking-widest text-gold">{v.n}</span>
+                <h3 className="font-serif text-4xl text-navy">{v.t}</h3>
               </div>
-              <p className="mt-4 flex-grow text-sm font-light leading-relaxed text-muted-foreground">
+              <p className="mt-4 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
                 {v.d}
               </p>
             </div>
@@ -321,15 +321,15 @@ function Contato() {
         <SectionTitle label="CONTATO" />
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
+            <h2 className="font-serif text-5xl leading-tight text-navy sm:text-6xl">
               Vamos conversar sobre o seu caso.
             </h2>
             <div className="mt-10 space-y-8 lg:mt-12">
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
                 <div>
-                  <p className="text-xs tracking-[0.3em] text-gold">TELEFONE</p>
-                  <a href="tel:+554799964-3469" className="mt-1 block text-lg text-navy hover:text-gold">
+                  <p className="text-sm font-medium tracking-[0.3em] text-gold">TELEFONE</p>
+                  <a href="tel:+554799964-3469" className="mt-1 block text-xl font-medium text-navy hover:text-gold">
                     +55 47 99964-3469
                   </a>
                 </div>
@@ -337,8 +337,8 @@ function Contato() {
               <div className="flex items-start gap-4">
                 <Mail className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
                 <div>
-                  <p className="text-xs tracking-[0.3em] text-gold">E-MAIL</p>
-                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-lg text-navy hover:text-gold">
+                  <p className="text-sm font-medium tracking-[0.3em] text-gold">E-MAIL</p>
+                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-xl font-medium text-navy hover:text-gold">
                     contato@kloehnbelusso.adv.br
                   </a>
                 </div>
@@ -346,12 +346,12 @@ function Contato() {
               <div className="flex items-start gap-4">
                 <Instagram className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
                 <div>
-                  <p className="text-xs tracking-[0.3em] text-gold">INSTAGRAM</p>
+                  <p className="text-sm font-medium tracking-[0.3em] text-gold">INSTAGRAM</p>
                   <a
                     href="https://instagram.com/kloehnbelussoadvocacia"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-lg text-navy hover:text-gold"
+                    className="mt-1 block text-xl font-medium text-navy hover:text-gold"
                   >
                     @kloehnbelussoadvocacia
                   </a>
@@ -363,7 +363,7 @@ function Contato() {
           <form onSubmit={onSubmit} className="border border-border bg-card p-8 sm:p-10">
             {(["nome", "email", "telefone"] as const).map((f) => (
               <label key={f} className="mb-8 block">
-                <span className="text-xs tracking-[0.3em] text-gold">
+                <span className="text-sm font-medium tracking-[0.3em] text-gold">
                   {f === "email" ? "E-MAIL" : f.toUpperCase()}
                 </span>
                 <input
@@ -371,23 +371,23 @@ function Contato() {
                   type={f === "email" ? "email" : "text"}
                   value={form[f]}
                   onChange={(e) => setForm({ ...form, [f]: e.target.value })}
-                  className="mt-2 block w-full border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
+                  className="mt-2 block w-full border-b border-border bg-transparent py-2 text-base font-normal text-navy outline-none focus:border-gold"
                 />
               </label>
             ))}
             <label className="mb-8 block">
-              <span className="text-xs tracking-[0.3em] text-gold">MENSAGEM</span>
+              <span className="text-sm font-medium tracking-[0.3em] text-gold">MENSAGEM</span>
               <textarea
                 required
                 rows={4}
                 value={form.mensagem}
                 onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-                className="mt-2 block w-full resize-none border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
+                className="mt-2 block w-full resize-none border-b border-border bg-transparent py-2 text-base font-normal text-navy outline-none focus:border-gold"
               />
             </label>
             <button
               type="submit"
-              className="w-full bg-gold py-4 text-xs tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+              className="w-full bg-gold py-4 text-sm font-medium tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
             >
               ENVIAR MENSAGEM
             </button>
@@ -403,7 +403,7 @@ function Footer() {
     <footer className="bg-navy py-12 text-navy-foreground">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <Logo light />
-        <p className="text-xs tracking-wide text-navy-foreground/70">
+        <p className="text-sm font-normal tracking-wide text-navy-foreground/70">
           © 2026 Kloehn & Belusso Advocacia. Todos os direitos reservados.
         </p>
       </div>

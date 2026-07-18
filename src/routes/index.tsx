@@ -185,7 +185,7 @@ function Sobre() {
     <section id="sobre" className="bg-background py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="SOBRE NÓS" />
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[5fr_7fr] lg:gap-12">
+        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[5fr_7fr] lg:gap-8">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden sm:max-w-[17rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[19rem]">
             <img
               src={sobreImg.url}

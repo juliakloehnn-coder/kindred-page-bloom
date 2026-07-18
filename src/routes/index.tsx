@@ -16,6 +16,7 @@ import duoImg from "@/assets/duo.jpg";
 import juliaImg from "@/assets/julia.jpg";
 import ketlinImg from "@/assets/ketlin.jpg";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
+import monogramAsset from "@/assets/kb-monogram.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,

@@ -118,11 +118,11 @@ function Hero() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/90 via-45% to-cream/10"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/75 via-40% to-cream/5"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-t from-cream/40 via-transparent to-cream/20"
+        className="absolute inset-0 z-10 bg-gradient-to-t from-cream/25 via-transparent to-cream/10"
       />
       <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-32">
         <img

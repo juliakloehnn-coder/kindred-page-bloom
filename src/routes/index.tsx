@@ -223,35 +223,34 @@ function QuemSomos() {
   ];
   return (
     <section id="quem" className="bg-cream py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-12 text-center lg:mb-16">
-          <p className="mb-4 text-xs tracking-[0.4em] text-gold">QUEM SOMOS</p>
-          <div className="mx-auto h-px w-16 bg-gold" />
-        </div>
-        <div className="grid gap-10 md:grid-cols-2 md:gap-12">
+      <SectionContainer>
+        <SectionTitle label="QUEM SOMOS" />
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
           {socias.map((s) => (
-            <div key={s.name} className="flex flex-col items-center gap-8 sm:flex-row sm:items-start">
-              <img
-                src={s.img}
-                alt={s.name}
-                width={900}
-                height={1100}
-                loading="lazy"
-                className="h-80 w-64 flex-shrink-0 object-cover"
-              />
-              <div className="pt-4 text-center sm:text-left">
-                <h3 className="font-serif text-3xl leading-tight text-navy">
+            <div key={s.name} className="flex flex-col items-center text-center">
+              <div className="relative aspect-[3/4] w-full max-w-[18rem] overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.name}
+                  width={900}
+                  height={1100}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
+              <div className="mt-8">
+                <h3 className="font-serif text-2xl leading-tight text-navy sm:text-3xl">
                   {s.name.split(" ").map((w, i) => (
                     <span key={i}>{w}<br /></span>
                   ))}
                 </h3>
                 <p className="mt-4 text-sm tracking-widest text-gold">{s.oab}</p>
-                <div className="mt-4 h-px w-16 bg-gold sm:mx-0 mx-auto" />
+                <div className="mx-auto mt-4 h-px w-16 bg-gold" />
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }

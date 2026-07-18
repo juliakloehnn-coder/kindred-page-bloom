@@ -77,14 +77,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Kloehn & Belusso Advocacia — Soluções jurídicas sob medida" },
+      { name: "description", content: "Advocacia com atendimento ético, personalizado e eficiente. Direito Civil, Empresarial, Família, Imobiliário, Criminal e Trabalhista." },
+      { property: "og:title", content: "Kloehn & Belusso Advocacia" },
+      { property: "og:description", content: "Compromisso que gera confiança. Atuação multidisciplinar, soluções sob medida." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

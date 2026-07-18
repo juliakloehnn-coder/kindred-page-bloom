@@ -270,8 +270,8 @@ function Areas() {
           {areas.map((a) => (
             <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-10 transition hover:bg-muted">
               <a.icon className="h-8 w-8 stroke-[1.25] text-gold" />
-              <h3 className="mt-6 font-serif text-2xl text-navy">{a.title}</h3>
-              <p className="mt-3 flex-grow text-sm font-light leading-relaxed text-muted-foreground">
+              <h3 className="mt-6 font-serif text-3xl text-navy">{a.title}</h3>
+              <p className="mt-3 flex-grow text-base font-light leading-relaxed text-muted-foreground">
                 {a.desc}
               </p>
               <div className="mt-6 h-px w-10 bg-gold" />

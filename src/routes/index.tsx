@@ -400,8 +400,8 @@ function Contato() {
 
 function Footer() {
   return (
-    <footer className="bg-navy py-12 text-navy-foreground">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+    <footer className="bg-navy py-10 text-navy-foreground">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 md:flex-row">
         <Logo light />
         <p className="text-sm font-normal tracking-wide text-navy-foreground/70">
           © 2026 Kloehn & Belusso Advocacia. Todos os direitos reservados.

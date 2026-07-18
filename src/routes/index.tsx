@@ -114,11 +114,11 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover object-right"
+        className="pointer-events-none absolute right-0 top-0 z-0 h-full w-auto object-contain object-right opacity-95"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/95 via-45% to-cream/20"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/90 via-50% to-cream/20"
       />
       <div
         aria-hidden="true"

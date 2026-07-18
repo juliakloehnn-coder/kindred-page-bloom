@@ -11,7 +11,7 @@ import {
   Mail,
   MessageCircle,
 } from "lucide-react";
-import duoImg from "@/assets/duo.jpg";
+import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
 import juliaImg from "@/assets/julia.jpg";
 import ketlinImg from "@/assets/ketlin.jpg";
 import heroJusticeBg from "@/assets/hero-justice-transparent.png";
@@ -166,7 +166,7 @@ function Sobre() {
     <section id="sobre" className="bg-background py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-2">
         <img
-          src={duoImg}
+          src={sobreImg.url}
           alt="Sócias do escritório Kloehn & Belusso Advocacia"
           width={900}
           height={1000}

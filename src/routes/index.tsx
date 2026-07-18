@@ -114,11 +114,11 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute -inset-8 z-0 h-[calc(100%+4rem)] w-[calc(100%+4rem)] object-cover object-[center_38%] opacity-60 blur-xl contrast-125 sepia-[.08]"
+        className="pointer-events-none absolute -inset-8 z-0 h-[calc(100%+4rem)] w-[calc(100%+4rem)] object-cover object-[center_30%] opacity-70 blur-2xl contrast-125 sepia-[.08]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-b from-cream/90 via-cream/68 to-cream/90"
+        className="absolute inset-0 z-10 bg-gradient-to-b from-cream/92 via-cream/72 to-cream/92"
       />
       <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-40">
         <div className="mb-6 h-px w-16 bg-gold" />

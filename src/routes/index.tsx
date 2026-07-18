@@ -284,17 +284,17 @@ function Areas() {
 
 function Valores() {
   return (
-    <section className="bg-cream py-20 lg:py-28">
+    <section className="bg-cream py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="NOSSOS VALORES" />
-        <div className="grid auto-rows-fr grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+        <div className="grid auto-rows-fr grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           {valores.map((v) => (
-            <div key={v.t} className="flex h-full flex-col border-t border-border pt-6">
+            <div key={v.t} className="flex h-full flex-col border-t border-border pt-5">
               <div className="flex items-baseline gap-3">
                 <span className="text-sm font-medium tracking-widest text-gold">{v.n}</span>
-                <h3 className="font-serif text-4xl text-navy">{v.t}</h3>
+                <h3 className="font-serif text-3xl text-navy">{v.t}</h3>
               </div>
-              <p className="mt-4 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
+              <p className="mt-3 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
                 {v.d}
               </p>
             </div>

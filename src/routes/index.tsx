@@ -165,14 +165,16 @@ function Sobre() {
   return (
     <section id="sobre" className="bg-background py-24">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-2">
-        <img
-          src={sobreImg.url}
-          alt="Sócias do escritório Kloehn & Belusso Advocacia"
-          width={900}
-          height={1000}
-          loading="lazy"
-          className="w-full object-cover"
-        />
+        <div className="relative aspect-[4/5] w-full overflow-hidden lg:aspect-[3/4]">
+          <img
+            src={sobreImg.url}
+            alt="Sócias do escritório Kloehn & Belusso Advocacia"
+            width={900}
+            height={1000}
+            loading="lazy"
+            className="absolute inset-0 h-full w-full object-cover object-[center_10%]"
+          />
+        </div>
         <div>
           <div className="mb-6 h-px w-16 bg-gold" />
           <p className="mb-4 text-xs tracking-[0.4em] text-gold">SOBRE NÓS</p>

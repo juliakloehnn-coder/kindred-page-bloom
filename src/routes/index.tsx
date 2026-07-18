@@ -114,38 +114,36 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute right-0 top-0 z-0 h-full w-[55%] object-cover object-[center_30%]"
+        className="pointer-events-none absolute right-0 top-0 z-0 h-full w-[65%] object-cover object-[center_30%]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/80 to-transparent"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/70 to-cream/30"
       />
-      <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-7xl flex-col items-start justify-center px-6 py-24 lg:py-32">
-        <div className="max-w-2xl">
-          <img
-            src={monogramAsset.url}
-            alt=""
-            aria-hidden="true"
-            className="mb-8 h-28 w-auto md:h-36"
-          />
-          <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
-            KLOEHN &<br />BELUSSO
-          </h1>
-          <p className="mt-5 text-xs tracking-[0.5em] text-gold">ADVOCACIA</p>
-          <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row">
-            <a
-              href="#areas"
-              className="bg-gold px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
-            >
-              ÁREAS DE ATUAÇÃO
-            </a>
-            <a
-              href="#contato"
-              className="border border-border bg-cream px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
-            >
-              CONTATO
-            </a>
-          </div>
+      <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-32">
+        <img
+          src={monogramAsset.url}
+          alt=""
+          aria-hidden="true"
+          className="mb-8 h-28 w-auto md:h-36"
+        />
+        <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
+          KLOEHN &<br />BELUSSO
+        </h1>
+        <p className="mt-5 text-xs tracking-[0.5em] text-gold">ADVOCACIA</p>
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a
+            href="#areas"
+            className="bg-gold px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+          >
+            ÁREAS DE ATUAÇÃO
+          </a>
+          <a
+            href="#contato"
+            className="border border-border bg-cream px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+          >
+            CONTATO
+          </a>
         </div>
       </div>
     </section>

@@ -9,7 +9,6 @@ import {
   FileText,
   Phone,
   Mail,
-  MessageCircle,
 } from "lucide-react";
 import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
 import juliaNovaImg from "@/assets/julia-santos-kloehn.jpg.asset.json";

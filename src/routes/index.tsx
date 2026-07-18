@@ -183,34 +183,35 @@ function Hero() {
 function Sobre() {
   return (
     <section id="sobre" className="bg-background py-20 lg:py-28">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[6fr_7fr] lg:gap-16">
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden sm:max-w-[18rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[22rem]">
-          <img
-            src={sobreImg.url}
-            alt="Sócias do escritório Kloehn & Belusso Advocacia"
-            width={600}
-            height={750}
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover object-[center_30%] sm:object-[center_20%] lg:object-[center_10%]"
-          />
-        </div>
-        <div className="pt-2 lg:pt-8">
-          <div className="mb-4 h-px w-14 bg-gold" />
-          <p className="mb-3 text-xs tracking-[0.4em] text-gold">SOBRE NÓS</p>
-          <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
-            Compromisso que gera{" "}
-            <span className="italic text-gold">confiança</span>.
-          </h2>
-          <div className="mt-6 space-y-4 text-base font-light leading-relaxed text-muted-foreground lg:mt-8">
-            <p>
-              Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
-            </p>
-            <p>
-              Mais do que resolver questões, nosso propósito é proteger direitos e construir soluções.
-            </p>
+      <SectionContainer>
+        <SectionTitle label="SOBRE NÓS" />
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[5fr_7fr] lg:gap-16">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden sm:max-w-[18rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[22rem]">
+            <img
+              src={sobreImg.url}
+              alt="Sócias do escritório Kloehn & Belusso Advocacia"
+              width={600}
+              height={750}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover object-[center_30%] sm:object-[center_20%] lg:object-[center_10%]"
+            />
+          </div>
+          <div className="pt-2 lg:pt-8">
+            <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+              Compromisso que gera{" "}
+              <span className="italic text-gold">confiança</span>.
+            </h2>
+            <div className="mt-6 space-y-4 text-base font-light leading-relaxed text-muted-foreground lg:mt-8">
+              <p>
+                Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
+              </p>
+              <p>
+                Mais do que resolver questões, nosso propósito é proteger direitos e construir soluções.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }

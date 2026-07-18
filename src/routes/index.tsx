@@ -114,7 +114,7 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute right-0 top-0 z-0 h-full w-[65%] object-cover object-right"
+        className="pointer-events-none absolute right-0 top-0 z-0 h-full w-[65%] object-cover object-right contrast-125 saturate-110"
       />
       <div
         aria-hidden="true"

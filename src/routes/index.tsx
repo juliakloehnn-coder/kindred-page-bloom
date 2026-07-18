@@ -258,12 +258,10 @@ function Areas() {
   return (
     <section id="areas" className="bg-background py-16 lg:py-20">
       <SectionContainer>
-        <div className="mb-10 text-center lg:mb-14">
-          <SectionTitle label="ÁREAS DE ATUAÇÃO" />
-          <h3 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
-            Atuação multidisciplinar,<br />soluções sob medida.
-          </h3>
-        </div>
+        <SectionTitle label="ÁREAS DE ATUAÇÃO" />
+        <h3 className="mb-10 text-center font-serif text-3xl leading-tight text-navy sm:text-4xl lg:mb-14 lg:text-5xl">
+          Atuação multidisciplinar,<br />soluções sob medida.
+        </h3>
         <div className="grid auto-rows-fr grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3">
           {areas.map((a) => (
             <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-8 transition hover:bg-muted lg:p-10">

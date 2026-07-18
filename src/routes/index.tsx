@@ -49,18 +49,18 @@ const valores = [
 function Logo({ light = false }: { light?: boolean }) {
   if (light) {
     return (
-      <a href="#home" className="flex items-center gap-5">
+      <a href="#home" className="flex items-center gap-4">
         <img
           src={monogramAsset.url}
           alt=""
           aria-hidden
-          className="h-16 w-auto"
+          className="h-12 w-auto"
         />
         <span className="flex flex-col leading-none">
-          <span className="font-serif text-2xl font-light tracking-[0.04em] text-white">
+          <span className="font-serif text-[19px] font-normal tracking-[0.06em] text-white">
             KLOEHN &amp; BELUSSO
           </span>
-          <span className="mt-2 text-[11px] font-light tracking-[0.42em] text-gold">
+          <span className="mt-1.5 text-[9px] font-light tracking-[0.5em] text-gold">
             ADVOCACIA
           </span>
         </span>
@@ -80,14 +80,14 @@ function Logo({ light = false }: { light?: boolean }) {
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-navy text-navy-foreground">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
         <Logo light />
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {nav.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="text-[15px] font-normal text-white transition hover:text-gold"
+              className="text-[13px] font-normal text-white transition hover:text-gold"
             >
               {n.label}
             </a>
@@ -95,7 +95,7 @@ function Header() {
         </nav>
         <a
           href="#contato"
-          className="hidden border px-6 py-3 text-[12px] font-light tracking-[0.28em] transition hover:bg-gold hover:text-navy lg:inline-block"
+          className="hidden border px-5 py-2.5 text-[10px] font-light tracking-[0.32em] transition hover:bg-gold hover:text-navy lg:inline-block"
           style={{ borderColor: "var(--color-gold)", color: "var(--color-gold)" }}
         >
           FALE CONOSCO

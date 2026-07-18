@@ -9,6 +9,7 @@ import {
   FileText,
   Phone,
   Mail,
+  Instagram,
 } from "lucide-react";
 import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
 import juliaNovaImg from "@/assets/julia-santos-kloehn.jpg.asset.json";
@@ -375,6 +376,18 @@ function Footer() {
     <footer className="bg-navy py-12 text-navy-foreground">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <Logo light />
+        <div className="flex items-center gap-6">
+          <a
+            href="https://instagram.com/kloehnbelussoadvocacia"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram @kloehnbelussoadvocacia"
+            className="flex items-center gap-2 text-navy-foreground/80 transition hover:text-gold"
+          >
+            <Instagram className="h-5 w-5" />
+            <span className="text-xs tracking-wide">@kloehnbelussoadvocacia</span>
+          </a>
+        </div>
         <p className="text-xs tracking-wide text-navy-foreground/70">
           © 2026 Kloehn & Belusso Advocacia. Todos os direitos reservados.
         </p>

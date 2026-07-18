@@ -46,6 +46,23 @@ const valores = [
   { n: "04", t: "Compromisso", d: "Dedicação integral aos interesses de quem nos confia sua causa." },
 ];
 
+function SectionContainer({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div className={`mx-auto w-full max-w-7xl px-6 ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+function SectionTitle({ label, className = "" }: { label: string; className?: string }) {
+  return (
+    <div className={`mb-12 text-center lg:mb-16 ${className}`}>
+      <p className="mb-4 text-xs tracking-[0.4em] text-gold">{label}</p>
+      <div className="mx-auto h-px w-16 bg-gold" />
+    </div>
+  );
+}
+
 function Logo({ light = false }: { light?: boolean }) {
   if (light) {
     return (
@@ -166,34 +183,35 @@ function Hero() {
 function Sobre() {
   return (
     <section id="sobre" className="bg-background py-20 lg:py-28">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[6fr_7fr] lg:gap-16">
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden sm:max-w-[18rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[22rem]">
-          <img
-            src={sobreImg.url}
-            alt="Sócias do escritório Kloehn & Belusso Advocacia"
-            width={600}
-            height={750}
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover object-[center_30%] sm:object-[center_20%] lg:object-[center_10%]"
-          />
-        </div>
-        <div className="pt-2 lg:pt-8">
-          <div className="mb-4 h-px w-14 bg-gold" />
-          <p className="mb-3 text-xs tracking-[0.4em] text-gold">SOBRE NÓS</p>
-          <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
-            Compromisso que gera{" "}
-            <span className="italic text-gold">confiança</span>.
-          </h2>
-          <div className="mt-6 space-y-4 text-base font-light leading-relaxed text-muted-foreground lg:mt-8">
-            <p>
-              Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
-            </p>
-            <p>
-              Mais do que resolver questões, nosso propósito é proteger direitos e construir soluções.
-            </p>
+      <SectionContainer>
+        <SectionTitle label="SOBRE NÓS" />
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[5fr_7fr] lg:gap-16">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden sm:max-w-[18rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[22rem]">
+            <img
+              src={sobreImg.url}
+              alt="Sócias do escritório Kloehn & Belusso Advocacia"
+              width={600}
+              height={750}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover object-[center_30%] sm:object-[center_20%] lg:object-[center_10%]"
+            />
+          </div>
+          <div className="pt-2 lg:pt-8">
+            <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+              Compromisso que gera{" "}
+              <span className="italic text-gold">confiança</span>.
+            </h2>
+            <div className="mt-6 space-y-4 text-base font-light leading-relaxed text-muted-foreground lg:mt-8">
+              <p>
+                Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
+              </p>
+              <p>
+                Mais do que resolver questões, nosso propósito é proteger direitos e construir soluções.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }
@@ -205,35 +223,34 @@ function QuemSomos() {
   ];
   return (
     <section id="quem" className="bg-cream py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-12 text-center lg:mb-16">
-          <p className="mb-4 text-xs tracking-[0.4em] text-gold">QUEM SOMOS</p>
-          <div className="mx-auto h-px w-16 bg-gold" />
-        </div>
-        <div className="grid gap-10 md:grid-cols-2 md:gap-12">
+      <SectionContainer>
+        <SectionTitle label="QUEM SOMOS" />
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
           {socias.map((s) => (
-            <div key={s.name} className="flex flex-col items-center gap-8 sm:flex-row sm:items-start">
-              <img
-                src={s.img}
-                alt={s.name}
-                width={900}
-                height={1100}
-                loading="lazy"
-                className="h-80 w-64 flex-shrink-0 object-cover"
-              />
-              <div className="pt-4 text-center sm:text-left">
-                <h3 className="font-serif text-3xl leading-tight text-navy">
+            <div key={s.name} className="flex flex-col items-center text-center">
+              <div className="relative aspect-[3/4] w-full max-w-[18rem] overflow-hidden">
+                <img
+                  src={s.img}
+                  alt={s.name}
+                  width={900}
+                  height={1100}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
+              <div className="mt-8">
+                <h3 className="font-serif text-2xl leading-tight text-navy sm:text-3xl">
                   {s.name.split(" ").map((w, i) => (
                     <span key={i}>{w}<br /></span>
                   ))}
                 </h3>
                 <p className="mt-4 text-sm tracking-widest text-gold">{s.oab}</p>
-                <div className="mt-4 h-px w-16 bg-gold sm:mx-0 mx-auto" />
+                <div className="mx-auto mt-4 h-px w-16 bg-gold" />
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }
@@ -241,27 +258,27 @@ function QuemSomos() {
 function Areas() {
   return (
     <section id="areas" className="bg-background py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <SectionContainer>
         <div className="mb-12 text-center lg:mb-16">
+          <p className="mb-4 text-xs tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
           <div className="mx-auto mb-6 h-px w-16 bg-gold" />
-          <p className="mb-6 text-xs tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
           <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
             Atuação multidisciplinar,<br />soluções sob medida.
           </h2>
         </div>
-        <div className="grid grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid auto-rows-fr grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3">
           {areas.map((a) => (
-            <div key={a.title} className="border-b border-r border-border bg-card p-10 transition hover:bg-muted">
+            <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-10 transition hover:bg-muted">
               <a.icon className="h-8 w-8 stroke-[1.25] text-gold" />
               <h3 className="mt-6 font-serif text-2xl text-navy">{a.title}</h3>
-              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p className="mt-3 flex-grow text-sm font-light leading-relaxed text-muted-foreground">
                 {a.desc}
               </p>
               <div className="mt-6 h-px w-10 bg-gold" />
             </div>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }
@@ -269,26 +286,22 @@ function Areas() {
 function Valores() {
   return (
     <section className="bg-cream py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-6 h-px w-16 bg-gold" />
-        <p className="mb-4 text-xs tracking-[0.4em] text-gold">NOSSOS VALORES</p>
-        <h2 className="max-w-3xl font-serif text-4xl leading-tight text-navy sm:text-5xl">
-          Pilares que sustentam cada parecer e cada decisão.
-        </h2>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-12">
+      <SectionContainer>
+        <SectionTitle label="NOSSOS VALORES" />
+        <div className="grid auto-rows-fr grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           {valores.map((v) => (
-            <div key={v.t} className="border-t border-border pt-6">
+            <div key={v.t} className="flex h-full flex-col border-t border-border pt-6">
               <div className="flex items-baseline gap-3">
                 <span className="text-xs tracking-widest text-gold">{v.n}</span>
                 <h3 className="font-serif text-3xl text-navy">{v.t}</h3>
               </div>
-              <p className="mt-4 text-sm font-light leading-relaxed text-muted-foreground">
+              <p className="mt-4 flex-grow text-sm font-light leading-relaxed text-muted-foreground">
                 {v.d}
               </p>
             </div>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }
@@ -305,82 +318,83 @@ function Contato() {
 
   return (
     <section id="contato" className="bg-background py-20 lg:py-28">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <div className="mb-6 h-px w-16 bg-gold" />
-          <p className="mb-4 text-xs tracking-[0.4em] text-gold">CONTATO</p>
-          <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
-            Vamos conversar sobre o seu caso.
-          </h2>
-          <div className="mt-10 space-y-8 lg:mt-12">
-            <div className="flex items-start gap-4">
-              <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
-              <div>
-                <p className="text-xs tracking-[0.3em] text-gold">TELEFONE</p>
-                <a href="tel:+554799964-3469" className="mt-1 block text-lg text-navy hover:text-gold">
-                  +55 47 99964-3469
-                </a>
+      <SectionContainer>
+        <SectionTitle label="CONTATO" />
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
+              Vamos conversar sobre o seu caso.
+            </h2>
+            <div className="mt-10 space-y-8 lg:mt-12">
+              <div className="flex items-start gap-4">
+                <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-gold">TELEFONE</p>
+                  <a href="tel:+554799964-3469" className="mt-1 block text-lg text-navy hover:text-gold">
+                    +55 47 99964-3469
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Mail className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
-              <div>
-                <p className="text-xs tracking-[0.3em] text-gold">E-MAIL</p>
-                <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-lg text-navy hover:text-gold">
-                  contato@kloehnbelusso.adv.br
-                </a>
+              <div className="flex items-start gap-4">
+                <Mail className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-gold">E-MAIL</p>
+                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-lg text-navy hover:text-gold">
+                    contato@kloehnbelusso.adv.br
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Instagram className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
-              <div>
-                <p className="text-xs tracking-[0.3em] text-gold">INSTAGRAM</p>
-                <a
-                  href="https://instagram.com/kloehnbelussoadvocacia"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 block text-lg text-navy hover:text-gold"
-                >
-                  @kloehnbelussoadvocacia
-                </a>
+              <div className="flex items-start gap-4">
+                <Instagram className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-gold">INSTAGRAM</p>
+                  <a
+                    href="https://instagram.com/kloehnbelussoadvocacia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 block text-lg text-navy hover:text-gold"
+                  >
+                    @kloehnbelussoadvocacia
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <form onSubmit={onSubmit} className="border border-border bg-card p-8 sm:p-10">
-          {(["nome", "email", "telefone"] as const).map((f) => (
-            <label key={f} className="mb-8 block">
-              <span className="text-xs tracking-[0.3em] text-gold">
-                {f === "email" ? "E-MAIL" : f.toUpperCase()}
-              </span>
-              <input
+          <form onSubmit={onSubmit} className="border border-border bg-card p-8 sm:p-10">
+            {(["nome", "email", "telefone"] as const).map((f) => (
+              <label key={f} className="mb-8 block">
+                <span className="text-xs tracking-[0.3em] text-gold">
+                  {f === "email" ? "E-MAIL" : f.toUpperCase()}
+                </span>
+                <input
+                  required
+                  type={f === "email" ? "email" : "text"}
+                  value={form[f]}
+                  onChange={(e) => setForm({ ...form, [f]: e.target.value })}
+                  className="mt-2 block w-full border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
+                />
+              </label>
+            ))}
+            <label className="mb-8 block">
+              <span className="text-xs tracking-[0.3em] text-gold">MENSAGEM</span>
+              <textarea
                 required
-                type={f === "email" ? "email" : "text"}
-                value={form[f]}
-                onChange={(e) => setForm({ ...form, [f]: e.target.value })}
-                className="mt-2 block w-full border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
+                rows={4}
+                value={form.mensagem}
+                onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
+                className="mt-2 block w-full resize-none border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
               />
             </label>
-          ))}
-          <label className="mb-8 block">
-            <span className="text-xs tracking-[0.3em] text-gold">MENSAGEM</span>
-            <textarea
-              required
-              rows={4}
-              value={form.mensagem}
-              onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
-              className="mt-2 block w-full resize-none border-b border-border bg-transparent py-2 text-navy outline-none focus:border-gold"
-            />
-          </label>
-          <button
-            type="submit"
-            className="w-full bg-gold py-4 text-xs tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
-          >
-            ENVIAR MENSAGEM
-          </button>
-        </form>
-      </div>
+            <button
+              type="submit"
+              className="w-full bg-gold py-4 text-xs tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            >
+              ENVIAR MENSAGEM
+            </button>
+          </form>
+        </div>
+      </SectionContainer>
     </section>
   );
 }

@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
 import juliaNovaImg from "@/assets/julia-santos-kloehn.jpg.asset.json";
-import ketlinImg from "@/assets/ketlin.jpg";
+import ketlinImg from "@/assets/ketlin-schveitzer-belusso.jpg.asset.json";
 import heroJusticeBg from "@/assets/hero-justice-transparent.png";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
 import monogramAsset from "@/assets/kb-monogram.png.asset.json";
@@ -199,7 +199,7 @@ function Sobre() {
 function QuemSomos() {
   const socias = [
     { img: juliaNovaImg.url, name: "Julia Santos Kloehn", oab: "OAB/SC 73.172" },
-    { img: ketlinImg, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187" },
+    { img: ketlinImg.url, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187" },
   ];
   return (
     <section id="quem" className="bg-cream py-24">

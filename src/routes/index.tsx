@@ -14,7 +14,7 @@ import {
 import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
 import juliaNovaImg from "@/assets/julia-santos-kloehn.jpg.asset.json";
 import ketlinImg from "@/assets/ketlin-schveitzer-belusso.jpg.asset.json";
-import heroJusticeBg from "@/assets/hero-justice-transparent.png";
+import heroJusticeBg from "@/assets/hero-justice-background.png.asset.json";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
 import monogramAsset from "@/assets/kb-monogram.png.asset.json";
 
@@ -130,7 +130,7 @@ function Hero() {
       {/* base cream layer guarantees the same background color everywhere */}
       <div aria-hidden="true" className="absolute inset-0 z-0 bg-cream" />
       <img
-        src={heroJusticeBg}
+        src={heroJusticeBg.url}
         alt=""
         aria-hidden="true"
         width={1400}

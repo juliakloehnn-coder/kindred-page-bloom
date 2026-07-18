@@ -150,27 +150,27 @@ function Hero() {
         className="absolute inset-x-0 top-0 z-10 h-40 bg-gradient-to-b from-cream via-cream/70 to-transparent"
       />
 
-      <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-32">
+      <div className="relative z-20 mx-auto flex min-h-[75vh] max-w-4xl flex-col items-center justify-center px-6 py-16 text-center lg:min-h-[80vh] lg:py-24">
         <img
           src={monogramAsset.url}
           alt=""
           aria-hidden="true"
-          className="mb-8 h-28 w-auto md:h-36"
+          className="mb-6 h-24 w-auto md:h-28"
         />
-        <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
+        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-6xl">
           KLOEHN & BELUSSO
         </h1>
-        <p className="mt-5 text-sm font-medium tracking-[0.5em] text-gold">ADVOCACIA</p>
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <p className="mt-4 text-sm font-medium tracking-[0.5em] text-gold">ADVOCACIA</p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="#areas"
-            className="bg-gold px-8 py-4 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            className="bg-gold px-7 py-3.5 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
           >
             ÁREAS DE ATUAÇÃO
           </a>
           <a
             href="#contato"
-            className="border border-border bg-cream px-8 py-4 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            className="border border-border bg-cream px-7 py-3.5 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
           >
             CONTATO
           </a>

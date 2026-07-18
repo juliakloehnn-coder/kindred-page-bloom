@@ -11,7 +11,7 @@ import {
   Mail,
   MessageCircle,
 } from "lucide-react";
-import duoImg from "@/assets/duo.jpg";
+import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
 import juliaImg from "@/assets/julia.jpg";
 import ketlinImg from "@/assets/ketlin.jpg";
 import heroJusticeBg from "@/assets/hero-justice-transparent.png";

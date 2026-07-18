@@ -114,15 +114,15 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-contain object-center blur-lg"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-contain object-right opacity-90"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/45"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/85 via-45% to-cream/25"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-b from-cream/70 via-transparent to-cream/70"
+        className="absolute inset-0 z-10 bg-gradient-to-t from-cream/70 via-transparent to-cream/40"
       />
       <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-32">
         <img
@@ -131,8 +131,8 @@ function Hero() {
           aria-hidden="true"
           className="mb-8 h-28 w-auto md:h-36"
         />
-        <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
-          KLOEHN &<br />BELUSSO
+        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+          KLOEHN & BELUSSO
         </h1>
         <p className="mt-5 text-xs tracking-[0.5em] text-gold">ADVOCACIA</p>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">

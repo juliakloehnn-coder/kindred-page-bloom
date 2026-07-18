@@ -57,7 +57,7 @@ function SectionContainer({ children, className = "" }: { children: React.ReactN
 function SectionTitle({ label, className = "" }: { label: string; className?: string }) {
   return (
     <div className={`mb-10 text-center lg:mb-14 ${className}`}>
-      <p className="mb-3 text-sm font-medium tracking-[0.4em] text-gold">{label}</p>
+      <h2 className="mb-3 text-sm font-medium tracking-[0.4em] text-gold">{label}</h2>
       <div className="mx-auto h-px w-16 bg-gold" />
     </div>
   );
@@ -197,10 +197,10 @@ function Sobre() {
             />
           </div>
           <div className="pt-2 lg:pt-6">
-            <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+            <h3 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
               Compromisso que gera{" "}
               <span className="italic text-gold">confiança</span>.
-            </h2>
+            </h3>
             <div className="mt-5 space-y-3 text-base font-normal leading-relaxed text-muted-foreground lg:mt-6">
               <p>
                 Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
@@ -239,7 +239,7 @@ function QuemSomos() {
                 />
               </div>
               <div className="mt-6">
-                <h3 className="font-serif text-[1.75rem] leading-[1.15] text-navy sm:text-[2rem] lg:text-[2.25rem]">
+                <h3 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
                   <span>{s.line1}<br /></span>
                   <span className="font-bold">{s.line2}</span>
                 </h3>
@@ -258,18 +258,15 @@ function Areas() {
   return (
     <section id="areas" className="bg-background py-16 lg:py-20">
       <SectionContainer>
-        <div className="mb-10 text-center lg:mb-14">
-          <p className="mb-3 text-sm font-medium tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
-          <div className="mx-auto mb-5 h-px w-16 bg-gold" />
-          <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
-            Atuação multidisciplinar,<br />soluções sob medida.
-          </h2>
-        </div>
+        <SectionTitle label="ÁREAS DE ATUAÇÃO" />
+        <h3 className="mb-10 text-center font-serif text-3xl leading-tight text-navy sm:text-4xl lg:mb-14 lg:text-5xl">
+          Atuação multidisciplinar,<br />soluções sob medida.
+        </h3>
         <div className="grid auto-rows-fr grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3">
           {areas.map((a) => (
             <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-8 transition hover:bg-muted lg:p-10">
               <a.icon className="h-7 w-7 stroke-[1.25] text-gold" />
-              <h3 className="mt-5 font-serif text-3xl text-navy">{a.title}</h3>
+              <h3 className="mt-5 font-serif text-2xl leading-tight text-navy sm:text-3xl">{a.title}</h3>
               <p className="mt-2 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
                 {a.desc}
               </p>
@@ -292,7 +289,7 @@ function Valores() {
             <div key={v.t} className="flex h-full flex-col border-t border-border pt-5">
               <div className="flex items-baseline gap-3">
                 <span className="text-sm font-medium tracking-widest text-gold">{v.n}</span>
-                <h3 className="font-serif text-3xl text-navy">{v.t}</h3>
+                <h3 className="font-serif text-2xl leading-tight text-navy sm:text-3xl">{v.t}</h3>
               </div>
               <p className="mt-3 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
                 {v.d}
@@ -321,9 +318,9 @@ function Contato() {
         <SectionTitle label="CONTATO" />
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
-            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
+            <h3 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
               Vamos conversar sobre o seu caso.
-            </h2>
+            </h3>
             <div className="mt-8 space-y-6 lg:mt-10">
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />

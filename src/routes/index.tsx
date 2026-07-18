@@ -172,7 +172,7 @@ function Sobre() {
             width={900}
             height={1000}
             loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover object-[center_18%]"
+            className="absolute inset-0 h-full w-full object-cover object-[center_10%]"
           />
         </div>
         <div>

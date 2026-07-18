@@ -46,6 +46,23 @@ const valores = [
   { n: "04", t: "Compromisso", d: "Dedicação integral aos interesses de quem nos confia sua causa." },
 ];
 
+function SectionContainer({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div className={`mx-auto w-full max-w-7xl px-6 ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+function SectionTitle({ label, className = "" }: { label: string; className?: string }) {
+  return (
+    <div className={`mb-12 text-center lg:mb-16 ${className}`}>
+      <p className="mb-4 text-xs tracking-[0.4em] text-gold">{label}</p>
+      <div className="mx-auto h-px w-16 bg-gold" />
+    </div>
+  );
+}
+
 function Logo({ light = false }: { light?: boolean }) {
   if (light) {
     return (

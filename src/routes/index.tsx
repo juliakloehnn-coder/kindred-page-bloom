@@ -222,13 +222,13 @@ function QuemSomos() {
     { img: ketlinImg.url, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187", line1: "Ketlin Schveitzer", line2: "Belusso" },
   ];
   return (
-    <section id="quem" className="bg-cream py-20 lg:py-28">
+    <section id="quem" className="bg-cream py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="QUEM SOMOS" />
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:gap-12">
           {socias.map((s) => (
             <div key={s.name} className="flex flex-col items-center text-center">
-              <div className="relative aspect-[3/4] w-full max-w-[18rem] overflow-hidden">
+              <div className="relative aspect-[3/4] w-full max-w-[16rem] overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.name}
@@ -238,13 +238,13 @@ function QuemSomos() {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
-              <div className="mt-8">
-                <h3 className="font-serif text-[2rem] leading-[1.15] text-navy sm:text-[2.25rem] lg:text-[2.5rem]">
+              <div className="mt-6">
+                <h3 className="font-serif text-[1.75rem] leading-[1.15] text-navy sm:text-[2rem] lg:text-[2.25rem]">
                   <span>{s.line1}<br /></span>
                   <span className="font-bold">{s.line2}</span>
                 </h3>
-                <p className="mt-5 text-base font-medium tracking-widest text-gold">{s.oab}</p>
-                <div className="mx-auto mt-4 h-px w-16 bg-gold" />
+                <p className="mt-4 text-base font-medium tracking-widest text-gold">{s.oab}</p>
+                <div className="mx-auto mt-3 h-px w-16 bg-gold" />
               </div>
             </div>
           ))}

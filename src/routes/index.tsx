@@ -258,27 +258,27 @@ function QuemSomos() {
 function Areas() {
   return (
     <section id="areas" className="bg-background py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6">
+      <SectionContainer>
         <div className="mb-12 text-center lg:mb-16">
+          <p className="mb-4 text-xs tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
           <div className="mx-auto mb-6 h-px w-16 bg-gold" />
-          <p className="mb-6 text-xs tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
           <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
             Atuação multidisciplinar,<br />soluções sob medida.
           </h2>
         </div>
-        <div className="grid grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid auto-rows-fr grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3">
           {areas.map((a) => (
-            <div key={a.title} className="border-b border-r border-border bg-card p-10 transition hover:bg-muted">
+            <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-10 transition hover:bg-muted">
               <a.icon className="h-8 w-8 stroke-[1.25] text-gold" />
               <h3 className="mt-6 font-serif text-2xl text-navy">{a.title}</h3>
-              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p className="mt-3 flex-grow text-sm font-light leading-relaxed text-muted-foreground">
                 {a.desc}
               </p>
               <div className="mt-6 h-px w-10 bg-gold" />
             </div>
           ))}
         </div>
-      </div>
+      </SectionContainer>
     </section>
   );
 }

@@ -86,7 +86,7 @@ function Header() {
             <a
               key={n.href}
               href={n.href}
-              className="text-[13px] font-normal text-white transition hover:text-gold"
+              className="text-[15px] font-normal text-white transition hover:text-gold"
             >
               {n.label}
             </a>

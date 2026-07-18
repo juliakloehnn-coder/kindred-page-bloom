@@ -16,6 +16,7 @@ import duoImg from "@/assets/duo.jpg";
 import juliaImg from "@/assets/julia.jpg";
 import ketlinImg from "@/assets/ketlin.jpg";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
+import monogramAsset from "@/assets/kb-monogram.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -46,20 +47,32 @@ const valores = [
 ];
 
 function Logo({ light = false }: { light?: boolean }) {
+  if (light) {
+    return (
+      <a href="#home" className="flex items-center gap-4">
+        <img
+          src={monogramAsset.url}
+          alt=""
+          aria-hidden
+          className="h-14 w-auto"
+        />
+        <span className="flex flex-col leading-none">
+          <span className="text-[15px] font-normal tracking-[0.18em] text-white sm:text-base">
+            KLOEHN &amp; BELUSSO
+          </span>
+          <span className="mt-2 text-[10px] tracking-[0.42em] text-gold">
+            ADVOCACIA
+          </span>
+        </span>
+        <span className="sr-only">Kloehn & Belusso Advocacia</span>
+      </a>
+    );
+  }
   return (
     <img
       src={logoAsset.url}
       alt="Kloehn & Belusso Advocacia"
       className="h-12 w-auto md:h-14"
-      style={
-        light
-          ? {
-              // Inverte o texto escuro para branco; o KB dourado fica claro (creme),
-              // mantendo bom contraste sobre o navy.
-              filter: "brightness(0) invert(1)",
-            }
-          : undefined
-      }
     />
   );
 }
@@ -67,14 +80,14 @@ function Logo({ light = false }: { light?: boolean }) {
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-navy text-navy-foreground">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
         <Logo light />
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-12 lg:flex">
           {nav.map((n) => (
             <a
               key={n.href}
               href={n.href}
-              className="text-sm font-light tracking-wide text-navy-foreground/85 transition hover:text-gold"
+              className="text-[15px] font-light text-white/95 transition hover:text-gold"
             >
               {n.label}
             </a>
@@ -82,7 +95,7 @@ function Header() {
         </nav>
         <a
           href="#contato"
-          className="hidden border px-6 py-3 text-xs tracking-[0.25em] transition hover:bg-gold hover:text-navy lg:inline-block"
+          className="hidden border px-6 py-3 text-[11px] tracking-[0.3em] transition hover:bg-gold hover:text-navy lg:inline-block"
           style={{ borderColor: "var(--color-gold)", color: "var(--color-gold)" }}
         >
           FALE CONOSCO

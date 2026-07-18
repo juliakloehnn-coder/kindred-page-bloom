@@ -218,8 +218,8 @@ function Sobre() {
 
 function QuemSomos() {
   const socias = [
-    { img: juliaNovaImg.url, name: "Julia Santos Kloehn", oab: "OAB/SC 73.172" },
-    { img: ketlinImg.url, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187" },
+    { img: juliaNovaImg.url, name: "Julia Santos Kloehn", oab: "OAB/SC 73.172", line1: "Julia Santos", line2: "Kloehn" },
+    { img: ketlinImg.url, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187", line1: "Ketlin Schveitzer", line2: "Belusso" },
   ];
   return (
     <section id="quem" className="bg-cream py-20 lg:py-28">
@@ -240,9 +240,8 @@ function QuemSomos() {
               </div>
               <div className="mt-8">
                 <h3 className="font-serif text-2xl leading-tight text-navy sm:text-3xl">
-                  {s.name.split(" ").map((w, i) => (
-                    <span key={i}>{w}<br /></span>
-                  ))}
+                  <span>{s.line1}<br /></span>
+                  <span className="font-bold">{s.line2}</span>
                 </h3>
                 <p className="mt-4 text-sm tracking-widest text-gold">{s.oab}</p>
                 <div className="mx-auto mt-4 h-px w-16 bg-gold" />

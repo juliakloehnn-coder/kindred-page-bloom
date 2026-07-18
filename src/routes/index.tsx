@@ -57,7 +57,7 @@ function SectionContainer({ children, className = "" }: { children: React.ReactN
 function SectionTitle({ label, className = "" }: { label: string; className?: string }) {
   return (
     <div className={`mb-12 text-center lg:mb-16 ${className}`}>
-      <p className="mb-4 text-xs tracking-[0.4em] text-gold">{label}</p>
+      <p className="mb-4 text-sm font-medium tracking-[0.4em] text-gold">{label}</p>
       <div className="mx-auto h-px w-16 bg-gold" />
     </div>
   );

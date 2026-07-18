@@ -114,7 +114,7 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute -inset-8 z-0 h-[calc(100%+4rem)] w-[calc(100%+4rem)] object-cover object-[center_30%] opacity-75 blur-lg contrast-125 sepia-[.08]"
+        className="pointer-events-none absolute -inset-8 z-0 h-[calc(100%+4rem)] w-[calc(100%+4rem)] object-cover object-[center_30%] opacity-70 blur-md contrast-125 sepia-[.08]"
       />
       <div
         aria-hidden="true"

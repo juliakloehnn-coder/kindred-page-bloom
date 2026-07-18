@@ -239,11 +239,11 @@ function QuemSomos() {
                 />
               </div>
               <div className="mt-6">
-                <h3 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+                <h3 className="font-serif text-[1.5rem] leading-[1.2] text-navy sm:text-[1.75rem] lg:text-[2rem]">
                   <span>{s.line1}<br /></span>
                   <span className="font-bold">{s.line2}</span>
                 </h3>
-                <p className="mt-4 text-base font-medium tracking-widest text-gold">{s.oab}</p>
+                <p className="mt-3 text-sm font-medium tracking-widest text-gold">{s.oab}</p>
                 <div className="mx-auto mt-3 h-px w-16 bg-gold" />
               </div>
             </div>

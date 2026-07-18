@@ -15,6 +15,7 @@ import justiceImg from "@/assets/justice.jpg";
 import duoImg from "@/assets/duo.jpg";
 import juliaImg from "@/assets/julia.jpg";
 import ketlinImg from "@/assets/ketlin.jpg";
+import logoAsset from "@/assets/logo-horizontal.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -46,33 +47,20 @@ const valores = [
 
 function Logo({ light = false }: { light?: boolean }) {
   return (
-    <div className="flex items-center gap-3">
-      <div
-        className="grid h-12 w-12 place-items-center border"
-        style={{ borderColor: "var(--color-gold)" }}
-      >
-        <span
-          className="font-serif text-xl leading-none"
-          style={{ color: "var(--color-gold)" }}
-        >
-          KB
-        </span>
-      </div>
-      <div className="leading-tight">
-        <div
-          className="font-serif text-base tracking-[0.18em]"
-          style={{ color: light ? "var(--color-navy-foreground)" : "var(--color-navy)" }}
-        >
-          KLOEHN & BELUSSO
-        </div>
-        <div
-          className="text-[10px] tracking-[0.35em]"
-          style={{ color: "var(--color-gold)" }}
-        >
-          ADVOCACIA
-        </div>
-      </div>
-    </div>
+    <img
+      src={logoAsset.url}
+      alt="Kloehn & Belusso Advocacia"
+      className="h-12 w-auto md:h-14"
+      style={
+        light
+          ? {
+              // Inverte o texto escuro para branco; o KB dourado fica claro (creme),
+              // mantendo bom contraste sobre o navy.
+              filter: "brightness(0) invert(1)",
+            }
+          : undefined
+      }
+    />
   );
 }
 

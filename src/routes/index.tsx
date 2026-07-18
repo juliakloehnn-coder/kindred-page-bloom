@@ -164,8 +164,8 @@ function Hero() {
 function Sobre() {
   return (
     <section id="sobre" className="bg-background py-20 lg:py-28">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[5fr_7fr] lg:gap-16">
-        <div className="relative mx-auto aspect-[4/5] w-full max-w-[14rem] overflow-hidden sm:max-w-[16rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[18rem]">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[6fr_7fr] lg:gap-16">
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden sm:max-w-[18rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[22rem]">
           <img
             src={sobreImg.url}
             alt="Sócias do escritório Kloehn & Belusso Advocacia"

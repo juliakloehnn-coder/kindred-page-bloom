@@ -11,10 +11,10 @@ import {
   Mail,
   MessageCircle,
 } from "lucide-react";
-import justiceImg from "@/assets/justice.jpg";
 import duoImg from "@/assets/duo.jpg";
 import juliaImg from "@/assets/julia.jpg";
 import ketlinImg from "@/assets/ketlin.jpg";
+import heroJusticeBg from "@/assets/hero-justice-background.png.asset.json";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
 import monogramAsset from "@/assets/kb-monogram.png.asset.json";
 
@@ -109,18 +109,18 @@ function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-cream">
       <img
-        src={justiceImg}
+        src={heroJusticeBg.url}
         alt=""
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-[center_28%] opacity-55 blur-2xl contrast-125 sepia-[.15]"
+        className="pointer-events-none absolute -inset-8 z-0 h-[calc(100%+4rem)] w-[calc(100%+4rem)] object-cover object-[center_38%] opacity-60 blur-xl contrast-125 sepia-[.08]"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-[5] bg-gradient-to-b from-cream/85 via-cream/60 to-cream/85"
+        className="absolute inset-0 z-10 bg-gradient-to-b from-cream/90 via-cream/68 to-cream/90"
       />
-      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-40">
+      <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-40">
         <div className="mb-6 h-px w-16 bg-gold" />
         <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
           KLOEHN &<br />BELUSSO

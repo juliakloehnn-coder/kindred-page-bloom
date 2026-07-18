@@ -56,8 +56,8 @@ function SectionContainer({ children, className = "" }: { children: React.ReactN
 
 function SectionTitle({ label, className = "" }: { label: string; className?: string }) {
   return (
-    <div className={`mb-12 text-center lg:mb-16 ${className}`}>
-      <p className="mb-4 text-sm font-medium tracking-[0.4em] text-gold">{label}</p>
+    <div className={`mb-10 text-center lg:mb-14 ${className}`}>
+      <p className="mb-3 text-sm font-medium tracking-[0.4em] text-gold">{label}</p>
       <div className="mx-auto h-px w-16 bg-gold" />
     </div>
   );
@@ -150,27 +150,27 @@ function Hero() {
         className="absolute inset-x-0 top-0 z-10 h-40 bg-gradient-to-b from-cream via-cream/70 to-transparent"
       />
 
-      <div className="relative z-20 mx-auto flex min-h-[85vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-32">
+      <div className="relative z-20 mx-auto flex min-h-[75vh] max-w-4xl flex-col items-center justify-center px-6 py-16 text-center lg:min-h-[80vh] lg:py-24">
         <img
           src={monogramAsset.url}
           alt=""
           aria-hidden="true"
-          className="mb-8 h-28 w-auto md:h-36"
+          className="mb-6 h-24 w-auto md:h-28"
         />
-        <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
+        <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-navy sm:text-5xl lg:text-6xl">
           KLOEHN & BELUSSO
         </h1>
-        <p className="mt-5 text-sm font-medium tracking-[0.5em] text-gold">ADVOCACIA</p>
-        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <p className="mt-4 text-sm font-medium tracking-[0.5em] text-gold">ADVOCACIA</p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a
             href="#areas"
-            className="bg-gold px-8 py-4 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            className="bg-gold px-7 py-3.5 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
           >
             ÁREAS DE ATUAÇÃO
           </a>
           <a
             href="#contato"
-            className="border border-border bg-cream px-8 py-4 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+            className="border border-border bg-cream px-7 py-3.5 text-sm font-medium tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
           >
             CONTATO
           </a>
@@ -182,11 +182,11 @@ function Hero() {
 
 function Sobre() {
   return (
-    <section id="sobre" className="bg-background py-20 lg:py-28">
+    <section id="sobre" className="bg-background py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="SOBRE NÓS" />
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[5fr_7fr] lg:gap-16">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[16rem] overflow-hidden sm:max-w-[18rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[22rem]">
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[5fr_7fr] lg:gap-12">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden sm:max-w-[17rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[19rem]">
             <img
               src={sobreImg.url}
               alt="Sócias do escritório Kloehn & Belusso Advocacia"
@@ -196,12 +196,12 @@ function Sobre() {
               className="absolute inset-0 h-full w-full object-cover object-[center_30%] sm:object-[center_20%] lg:object-[center_10%]"
             />
           </div>
-          <div className="pt-2 lg:pt-8">
-            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
+          <div className="pt-2 lg:pt-6">
+            <h2 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
               Compromisso que gera{" "}
               <span className="italic text-gold">confiança</span>.
             </h2>
-            <div className="mt-6 space-y-4 text-lg font-normal leading-relaxed text-muted-foreground lg:mt-8">
+            <div className="mt-5 space-y-3 text-base font-normal leading-relaxed text-muted-foreground lg:mt-6">
               <p>
                 Unimos conhecimento técnico, experiência e empatia para oferecer um atendimento jurídico próximo, transparente e eficiente.
               </p>
@@ -222,13 +222,13 @@ function QuemSomos() {
     { img: ketlinImg.url, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187", line1: "Ketlin Schveitzer", line2: "Belusso" },
   ];
   return (
-    <section id="quem" className="bg-cream py-20 lg:py-28">
+    <section id="quem" className="bg-cream py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="QUEM SOMOS" />
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-8 lg:gap-12">
           {socias.map((s) => (
             <div key={s.name} className="flex flex-col items-center text-center">
-              <div className="relative aspect-[3/4] w-full max-w-[18rem] overflow-hidden">
+              <div className="relative aspect-[3/4] w-full max-w-[16rem] overflow-hidden">
                 <img
                   src={s.img}
                   alt={s.name}
@@ -238,13 +238,13 @@ function QuemSomos() {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
-              <div className="mt-8">
-                <h3 className="font-serif text-[2rem] leading-[1.15] text-navy sm:text-[2.25rem] lg:text-[2.5rem]">
+              <div className="mt-6">
+                <h3 className="font-serif text-[1.75rem] leading-[1.15] text-navy sm:text-[2rem] lg:text-[2.25rem]">
                   <span>{s.line1}<br /></span>
                   <span className="font-bold">{s.line2}</span>
                 </h3>
-                <p className="mt-5 text-base font-medium tracking-widest text-gold">{s.oab}</p>
-                <div className="mx-auto mt-4 h-px w-16 bg-gold" />
+                <p className="mt-4 text-base font-medium tracking-widest text-gold">{s.oab}</p>
+                <div className="mx-auto mt-3 h-px w-16 bg-gold" />
               </div>
             </div>
           ))}
@@ -256,24 +256,24 @@ function QuemSomos() {
 
 function Areas() {
   return (
-    <section id="areas" className="bg-background py-20 lg:py-28">
+    <section id="areas" className="bg-background py-16 lg:py-20">
       <SectionContainer>
-        <div className="mb-12 text-center lg:mb-16">
-          <p className="mb-4 text-sm font-medium tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
-          <div className="mx-auto mb-6 h-px w-16 bg-gold" />
-          <h2 className="font-serif text-5xl leading-tight text-navy sm:text-6xl lg:text-7xl">
+        <div className="mb-10 text-center lg:mb-14">
+          <p className="mb-3 text-sm font-medium tracking-[0.4em] text-gold">ÁREAS DE ATUAÇÃO</p>
+          <div className="mx-auto mb-5 h-px w-16 bg-gold" />
+          <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl lg:text-6xl">
             Atuação multidisciplinar,<br />soluções sob medida.
           </h2>
         </div>
         <div className="grid auto-rows-fr grid-cols-1 border-l border-t border-border md:grid-cols-2 lg:grid-cols-3">
           {areas.map((a) => (
-            <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-10 transition hover:bg-muted">
-              <a.icon className="h-8 w-8 stroke-[1.25] text-gold" />
-              <h3 className="mt-6 font-serif text-4xl text-navy">{a.title}</h3>
-              <p className="mt-3 flex-grow text-lg font-normal leading-relaxed text-muted-foreground">
+            <div key={a.title} className="flex h-full flex-col border-b border-r border-border bg-card p-8 transition hover:bg-muted lg:p-10">
+              <a.icon className="h-7 w-7 stroke-[1.25] text-gold" />
+              <h3 className="mt-5 font-serif text-3xl text-navy">{a.title}</h3>
+              <p className="mt-2 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
                 {a.desc}
               </p>
-              <div className="mt-6 h-px w-10 bg-gold" />
+              <div className="mt-5 h-px w-10 bg-gold" />
             </div>
           ))}
         </div>
@@ -284,17 +284,17 @@ function Areas() {
 
 function Valores() {
   return (
-    <section className="bg-cream py-20 lg:py-28">
+    <section className="bg-cream py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="NOSSOS VALORES" />
-        <div className="grid auto-rows-fr grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+        <div className="grid auto-rows-fr grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           {valores.map((v) => (
-            <div key={v.t} className="flex h-full flex-col border-t border-border pt-6">
+            <div key={v.t} className="flex h-full flex-col border-t border-border pt-5">
               <div className="flex items-baseline gap-3">
                 <span className="text-sm font-medium tracking-widest text-gold">{v.n}</span>
-                <h3 className="font-serif text-4xl text-navy">{v.t}</h3>
+                <h3 className="font-serif text-3xl text-navy">{v.t}</h3>
               </div>
-              <p className="mt-4 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
+              <p className="mt-3 flex-grow text-base font-normal leading-relaxed text-muted-foreground">
                 {v.d}
               </p>
             </div>
@@ -316,20 +316,20 @@ function Contato() {
   };
 
   return (
-    <section id="contato" className="bg-background py-20 lg:py-28">
+    <section id="contato" className="bg-background py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="CONTATO" />
-        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-14">
           <div>
-            <h2 className="font-serif text-5xl leading-tight text-navy sm:text-6xl">
+            <h2 className="font-serif text-4xl leading-tight text-navy sm:text-5xl">
               Vamos conversar sobre o seu caso.
             </h2>
-            <div className="mt-10 space-y-8 lg:mt-12">
+            <div className="mt-8 space-y-6 lg:mt-10">
               <div className="flex items-start gap-4">
                 <Phone className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
                 <div>
                   <p className="text-sm font-medium tracking-[0.3em] text-gold">TELEFONE</p>
-                  <a href="tel:+554799964-3469" className="mt-1 block text-xl font-medium text-navy hover:text-gold">
+                  <a href="tel:+554799964-3469" className="mt-1 block text-lg font-medium text-navy hover:text-gold">
                     +55 47 99964-3469
                   </a>
                 </div>
@@ -338,7 +338,7 @@ function Contato() {
                 <Mail className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
                 <div>
                   <p className="text-sm font-medium tracking-[0.3em] text-gold">E-MAIL</p>
-                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-xl font-medium text-navy hover:text-gold">
+                  <a href="mailto:contato@kloehnbelusso.adv.br" className="mt-1 block text-lg font-medium text-navy hover:text-gold">
                     contato@kloehnbelusso.adv.br
                   </a>
                 </div>
@@ -351,7 +351,7 @@ function Contato() {
                     href="https://instagram.com/kloehnbelussoadvocacia"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-xl font-medium text-navy hover:text-gold"
+                    className="mt-1 block text-lg font-medium text-navy hover:text-gold"
                   >
                     @kloehnbelussoadvocacia
                   </a>
@@ -360,9 +360,9 @@ function Contato() {
             </div>
           </div>
 
-          <form onSubmit={onSubmit} className="border border-border bg-card p-8 sm:p-10">
+          <form onSubmit={onSubmit} className="border border-border bg-card p-7 sm:p-9">
             {(["nome", "email", "telefone"] as const).map((f) => (
-              <label key={f} className="mb-8 block">
+              <label key={f} className="mb-6 block">
                 <span className="text-sm font-medium tracking-[0.3em] text-gold">
                   {f === "email" ? "E-MAIL" : f.toUpperCase()}
                 </span>
@@ -375,7 +375,7 @@ function Contato() {
                 />
               </label>
             ))}
-            <label className="mb-8 block">
+            <label className="mb-6 block">
               <span className="text-sm font-medium tracking-[0.3em] text-gold">MENSAGEM</span>
               <textarea
                 required
@@ -387,7 +387,7 @@ function Contato() {
             </label>
             <button
               type="submit"
-              className="w-full bg-gold py-4 text-sm font-medium tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+              className="w-full bg-gold py-3.5 text-sm font-medium tracking-[0.3em] text-navy transition hover:bg-navy hover:text-navy-foreground"
             >
               ENVIAR MENSAGEM
             </button>
@@ -400,8 +400,8 @@ function Contato() {
 
 function Footer() {
   return (
-    <footer className="bg-navy py-12 text-navy-foreground">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+    <footer className="bg-navy py-10 text-navy-foreground">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-6 md:flex-row">
         <Logo light />
         <p className="text-sm font-normal tracking-wide text-navy-foreground/70">
           © 2026 Kloehn & Belusso Advocacia. Todos os direitos reservados.

@@ -108,39 +108,36 @@ function Header() {
 function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-cream">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 py-20 lg:grid-cols-2 lg:py-32">
-        <div className="relative z-10 order-2 text-center lg:order-1 lg:text-left">
-          <div className="mx-auto mb-6 h-px w-16 bg-gold lg:mx-0" />
-          <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
-            KLOEHN &<br />BELUSSO
-          </h1>
-          <p className="mt-4 text-xs tracking-[0.5em] text-gold">ADVOCACIA</p>
-          <p className="mx-auto mt-8 max-w-md text-base font-light leading-relaxed text-muted-foreground lg:mx-0">
-            Soluções jurídicas sob medida, guiadas por ética, excelência e compromisso com cada cliente.
-          </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
-            <a
-              href="#areas"
-              className="border border-navy bg-navy px-8 py-4 text-xs tracking-[0.25em] text-navy-foreground transition hover:bg-transparent hover:text-navy"
-            >
-              ÁREAS DE ATUAÇÃO
-            </a>
-            <a
-              href="#contato"
-              className="border border-navy px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
-            >
-              CONTATO
-            </a>
-          </div>
-        </div>
-        <div className="order-1 lg:order-2">
-          <img
-            src={justiceImg}
-            alt="Estátua da Justiça com livros jurídicos"
-            width={1400}
-            height={1400}
-            className="mx-auto w-full max-w-lg object-contain"
-          />
+      <img
+        src={justiceImg}
+        alt=""
+        aria-hidden="true"
+        width={1400}
+        height={1400}
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-50 blur-2xl contrast-125"
+      />
+      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-40">
+        <div className="mb-6 h-px w-16 bg-gold" />
+        <h1 className="font-serif text-5xl leading-[1.05] tracking-tight text-navy sm:text-6xl lg:text-7xl">
+          KLOEHN &<br />BELUSSO
+        </h1>
+        <p className="mt-4 text-xs tracking-[0.5em] text-gold">ADVOCACIA</p>
+        <p className="mx-auto mt-8 max-w-md text-base font-light leading-relaxed text-muted-foreground">
+          Soluções jurídicas sob medida, guiadas por ética, excelência e compromisso com cada cliente.
+        </p>
+        <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a
+            href="#areas"
+            className="border border-navy bg-navy px-8 py-4 text-xs tracking-[0.25em] text-navy-foreground transition hover:bg-transparent hover:text-navy"
+          >
+            ÁREAS DE ATUAÇÃO
+          </a>
+          <a
+            href="#contato"
+            className="border border-navy px-8 py-4 text-xs tracking-[0.25em] text-navy transition hover:bg-navy hover:text-navy-foreground"
+          >
+            CONTATO
+          </a>
         </div>
       </div>
     </section>

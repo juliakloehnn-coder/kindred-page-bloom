@@ -331,6 +331,20 @@ function Contato() {
                 </a>
               </div>
             </div>
+            <div className="flex items-start gap-4">
+              <Instagram className="mt-1 h-5 w-5 stroke-[1.25] text-gold" />
+              <div>
+                <p className="text-xs tracking-[0.3em] text-gold">INSTAGRAM</p>
+                <a
+                  href="https://instagram.com/kloehnbelussoadvocacia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block text-lg text-navy hover:text-gold"
+                >
+                  @kloehnbelussoadvocacia
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -376,18 +390,6 @@ function Footer() {
     <footer className="bg-navy py-12 text-navy-foreground">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
         <Logo light />
-        <div className="flex items-center gap-6">
-          <a
-            href="https://instagram.com/kloehnbelussoadvocacia"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram @kloehnbelussoadvocacia"
-            className="flex items-center gap-2 text-navy-foreground/80 transition hover:text-gold"
-          >
-            <Instagram className="h-5 w-5" />
-            <span className="text-xs tracking-wide">@kloehnbelussoadvocacia</span>
-          </a>
-        </div>
         <p className="text-xs tracking-wide text-navy-foreground/70">
           © 2026 Kloehn & Belusso Advocacia. Todos os direitos reservados.
         </p>

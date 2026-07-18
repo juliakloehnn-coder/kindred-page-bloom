@@ -267,14 +267,14 @@ function Areas() {
 
 function Valores() {
   return (
-    <section className="bg-cream py-24">
+    <section className="bg-cream py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-6 h-px w-16 bg-gold" />
         <p className="mb-4 text-xs tracking-[0.4em] text-gold">NOSSOS VALORES</p>
         <h2 className="max-w-3xl font-serif text-4xl leading-tight text-navy sm:text-5xl">
           Pilares que sustentam cada parecer e cada decisão.
         </h2>
-        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-12">
           {valores.map((v) => (
             <div key={v.t} className="border-t border-border pt-6">
               <div className="flex items-baseline gap-3">

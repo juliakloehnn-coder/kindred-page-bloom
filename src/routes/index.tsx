@@ -12,7 +12,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
-import juliaImg from "@/assets/julia.jpg";
+import juliaNovaImg from "@/assets/julia-santos-kloehn.jpg.asset.json";
 import ketlinImg from "@/assets/ketlin.jpg";
 import heroJusticeBg from "@/assets/hero-justice-transparent.png";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
@@ -198,7 +198,7 @@ function Sobre() {
 
 function QuemSomos() {
   const socias = [
-    { img: juliaImg, name: "Julia Kloehn Lazzari", oab: "OAB/SC 73.172" },
+    { img: juliaNovaImg.url, name: "Julia Santos Kloehn", oab: "OAB/SC 73.172" },
     { img: ketlinImg, name: "Ketlin Schveitzer Belusso", oab: "OAB/SC 74.187" },
   ];
   return (

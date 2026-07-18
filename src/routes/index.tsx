@@ -79,10 +79,10 @@ function Logo({ light = false }: { light?: boolean }) {
 function Header() {
   return (
     <header className="sticky top-0 z-40 bg-navy text-navy-foreground">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5 lg:px-14">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-14 lg:py-5">
         <Logo light />
-        <div className="hidden items-center gap-10 lg:flex">
-          <nav className="flex items-center gap-10">
+        <div className="hidden items-center gap-8 lg:flex lg:gap-12">
+          <nav className="flex items-center gap-8 lg:gap-12">
             {nav.map((n) => (
               <a
                 key={n.href}

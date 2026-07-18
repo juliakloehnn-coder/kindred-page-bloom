@@ -185,8 +185,8 @@ function Sobre() {
     <section id="sobre" className="bg-background py-16 lg:py-20">
       <SectionContainer>
         <SectionTitle label="SOBRE NÓS" />
-        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[5fr_7fr] lg:gap-8">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden sm:max-w-[17rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[19rem]">
+        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[4fr_7fr] lg:gap-4">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[15rem] overflow-hidden sm:max-w-[17rem] lg:mx-0 lg:aspect-[3/4] lg:max-w-[17rem]">
             <img
               src={sobreImg.url}
               alt="Sócias do escritório Kloehn & Belusso Advocacia"
@@ -196,7 +196,7 @@ function Sobre() {
               className="absolute inset-0 h-full w-full object-cover object-[center_30%] sm:object-[center_20%] lg:object-[center_10%]"
             />
           </div>
-          <div className="pt-2 lg:pt-6">
+          <div className="pt-2 lg:pt-2">
             <h3 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
               Compromisso que gera{" "}
               <span className="italic text-gold">confiança</span>.

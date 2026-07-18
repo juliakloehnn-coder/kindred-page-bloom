@@ -114,7 +114,7 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-contain opacity-30 blur-2xl"
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-60 blur-2xl"
       />
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center justify-center px-6 py-24 text-center lg:py-40">
         <div className="mb-6 h-px w-16 bg-gold" />

@@ -135,7 +135,7 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute right-0 bottom-0 z-10 h-[110%] w-auto max-w-[95%] object-contain object-bottom opacity-45 blur-[3px] grayscale contrast-50 saturate-0 brightness-125 mix-blend-multiply md:right-[5%] lg:right-[10%]"
+        className="pointer-events-none absolute right-0 bottom-0 z-10 h-[110%] w-auto max-w-[95%] object-contain object-bottom opacity-45 blur-[3px] grayscale contrast-50 saturate-0 brightness-125 mix-blend-multiply md:right-[10%] lg:right-[18%]"
       />
       <div
         aria-hidden="true"

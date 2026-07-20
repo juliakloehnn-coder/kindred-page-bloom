@@ -135,7 +135,7 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute -right-16 bottom-0 z-10 h-[95%] w-auto max-w-[70%] object-contain object-bottom blur-[2px]"
+        className="pointer-events-none absolute -right-16 bottom-0 z-10 h-[95%] w-auto max-w-[70%] object-contain object-bottom blur-md"
       />
 
       <div className="relative z-20 mx-auto flex min-h-[75vh] max-w-4xl flex-col items-center justify-center px-6 py-16 text-center lg:min-h-[80vh] lg:py-24">

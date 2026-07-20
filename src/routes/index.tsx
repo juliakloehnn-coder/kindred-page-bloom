@@ -135,7 +135,15 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute -right-16 bottom-0 z-10 h-[95%] w-auto max-w-[70%] object-contain object-bottom blur-sm contrast-75 saturate-50 brightness-110"
+        className="pointer-events-none absolute -right-32 bottom-[-6%] z-10 h-[84%] w-auto max-w-[58%] object-contain object-bottom opacity-45 blur-[3px] grayscale contrast-50 saturate-0 brightness-125 mix-blend-multiply md:-right-28 lg:-right-20"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[15] bg-gradient-to-r from-cream via-cream/90 to-cream/20"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 z-[15] h-1/3 bg-gradient-to-t from-cream via-cream/70 to-transparent"
       />
 
       <div className="relative z-20 mx-auto flex min-h-[75vh] max-w-4xl flex-col items-center justify-center px-6 py-16 text-center lg:min-h-[80vh] lg:py-24">

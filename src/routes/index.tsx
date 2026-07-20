@@ -14,7 +14,7 @@ import {
 import sobreImg from "@/assets/advogadas-sobre.jpeg.asset.json";
 import juliaNovaImg from "@/assets/julia-santos-kloehn.jpg.asset.json";
 import ketlinImg from "@/assets/ketlin-schveitzer-belusso.jpg.asset.json";
-import heroJusticeBg from "@/assets/hero-justice-background.png.asset.json";
+import heroJusticeBg from "@/assets/hero-justice-transparent.png.asset.json";
 import logoAsset from "@/assets/logo-horizontal.png.asset.json";
 import monogramAsset from "@/assets/kb-monogram.png.asset.json";
 
@@ -135,19 +135,7 @@ function Hero() {
         aria-hidden="true"
         width={1400}
         height={1400}
-        className="pointer-events-none absolute -right-16 bottom-0 z-0 h-[95%] w-auto max-w-[70%] object-contain object-bottom opacity-90 blur-[2px] contrast-105 saturate-105"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 z-10 bg-gradient-to-r from-cream via-cream/80 via-50% to-cream/15"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 z-10 h-48 bg-gradient-to-t from-cream via-cream/70 to-transparent"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 z-10 h-40 bg-gradient-to-b from-cream via-cream/70 to-transparent"
+        className="pointer-events-none absolute -right-16 bottom-0 z-10 h-[95%] w-auto max-w-[70%] object-contain object-bottom blur-[2px]"
       />
 
       <div className="relative z-20 mx-auto flex min-h-[75vh] max-w-4xl flex-col items-center justify-center px-6 py-16 text-center lg:min-h-[80vh] lg:py-24">
